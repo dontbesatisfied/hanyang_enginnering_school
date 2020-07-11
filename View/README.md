@@ -23,8 +23,8 @@
 쉽게말해서 **컨테이너** 라고 생각하시면 됩니다.
 
 <div>
-<img width="400" src="https://user-images.githubusercontent.com/36143374/87229069-32c3ba00-c3e0-11ea-912e-5440ea5c23bf.png">
-<img width="400" src="https://user-images.githubusercontent.com/36143374/87229109-74ecfb80-c3e0-11ea-90d4-7d836c89bca2.png">
+<img width="400" height="600" src="https://user-images.githubusercontent.com/36143374/87229069-32c3ba00-c3e0-11ea-912e-5440ea5c23bf.png">
+<img width="400" height="600" src="https://user-images.githubusercontent.com/36143374/87229109-74ecfb80-c3e0-11ea-90d4-7d836c89bca2.png">
 </div>
 
 ---
