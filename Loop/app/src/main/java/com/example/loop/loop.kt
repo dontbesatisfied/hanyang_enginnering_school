@@ -33,25 +33,75 @@ fun main() {
         println(".. $i")
     }
 
+    /*
+    .. 1
+    .. 2
+    .. 3
+    .. 4
+    .. 5
+    .. 6
+    .. 7
+    .. 8
+    .. 9
+    .. 10
+     */
+
 //    until은 시작부터 끝전까지
     for (i in 1 until 10) {
         println("until $i")
     }
+    /*
+    until 1
+    until 2
+    until 3
+    until 4
+    until 5
+    until 6
+    until 7
+    until 8
+    until 9
+     */
 
 //    downTo는 ..와는 반대로 시작부터 끝까지 감소
     for (i in 10 downTo 1) {
         println("downTo $i")
     }
+    /*
+    downTo 10
+    downTo 9
+    downTo 8
+    downTo 7
+    downTo 6
+    downTo 5
+    downTo 4
+    downTo 3
+    downTo 2
+    downTo 1
+     */
 
 //    step을 이용하면 건너뛰기 [1,3,5,7,9]
     for (i in 1..10 step 2) {
         println("step $i")
     }
+    /*
+    step 1
+    step 3
+    step 5
+    step 7
+    step 9
+     */
 
 //  step은 앞서 나온 모든곳에 적용이 가능
     for (i in 10 downTo 1 step 2) {
         println("downTo step $i")
     }
+    /*
+    downTo step 10
+    downTo step 8
+    downTo step 6
+    downTo step 4
+    downTo step 2
+     */
 
 //    range가 아닌 배열이나 컬렉션을 적용하여 사용가능
     var list = mutableListOf("a", "b", "c", "d", "e")
@@ -59,16 +109,37 @@ fun main() {
     for (i in list) {
         println("list in $i")
     }
+    /*
+    list in a
+    list in b
+    list in c
+    list in d
+    list in e
+     */
 
 //  indices을 이용하면 값이 아닌 인덱스를 받음
     for (index in list.indices) {
         println("index $index is ${list[index]}")
     }
+    /*
+    index 0 is a
+    index 1 is b
+    index 2 is c
+    index 3 is d
+    index 4 is e
+     */
 
 //  withIndex를 이용하면 인덱스와 값을 받
     for ((index, value) in list.withIndex()) {
         println("index $index is $value")
     }
+    /*
+    index 0 is a
+    index 1 is b
+    index 2 is c
+    index 3 is d
+    index 4 is e
+     */
 
 
     /**
@@ -91,6 +162,17 @@ fun main() {
 //        조건에 대한 관리를 잘못하면 무한반복에 빠져 메모리 이슈가 생깁니다.
         index += 1 // index = index + 1
     }
+    /*
+    while 1
+    while 2
+    while 3
+    while 4
+    while 5
+    while 6
+    while 7
+    while 8
+    while 9
+     */
 
     /**
      * do ~ while
@@ -112,6 +194,9 @@ fun main() {
         println("do ~ while $index2")
         index2 += 1
     } while (index2 < 1)
+    /*
+    do ~ while 1
+     */
 
     /**
      * 반복문 제어
@@ -127,6 +212,10 @@ fun main() {
         }
         println("break $i")
     }
+    /*
+    break 1
+    break 2
+     */
 
     for (i in 1..5) {
         if (i == 3) {
@@ -134,6 +223,12 @@ fun main() {
         }
         println("continue $i")
     }
+    /*
+    continue 1
+    continue 2
+    continue 4
+    continue 5
+     */
 
 
 }
