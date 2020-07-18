@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 btnDivide.id -> {
                     setClickedOperator(btnList, btnDivide)
-                    val resultMap = operate(beforeNumber, currentNumber, operationType)
+                    val resultMap = operate(beforeNumber, currentNumber, operationType, 4)
                     currentNumber = resultMap["currentNum"] ?: error("")
                     beforeNumber = resultMap["beforeNum"] ?: error("")
                     operationType = 4
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 btnMultiply.id -> {
                     setClickedOperator(btnList, btnMultiply)
-                    val resultMap = operate(beforeNumber, currentNumber, operationType)
+                    val resultMap = operate(beforeNumber, currentNumber, operationType, 3)
                     currentNumber = resultMap["currentNum"] ?: error("")
                     beforeNumber = resultMap["beforeNum"] ?: error("")
                     operationType = 3
@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 btnSub.id -> {
                     setClickedOperator(btnList, btnSub)
-                    val resultMap = operate(beforeNumber, currentNumber, operationType)
+                    val resultMap = operate(beforeNumber, currentNumber, operationType, 2)
                     currentNumber = resultMap["currentNum"] ?: error("")
                     beforeNumber = resultMap["beforeNum"] ?: error("")
                     operationType = 2
@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 btnAdd.id -> {
                     setClickedOperator(btnList, btnAdd)
-                    val resultMap = operate(beforeNumber, currentNumber, operationType)
+                    val resultMap = operate(beforeNumber, currentNumber, operationType, 1)
                     currentNumber = resultMap["currentNum"] ?: error("")
                     beforeNumber = resultMap["beforeNum"] ?: error("")
                     operationType = 1
@@ -105,6 +105,7 @@ class MainActivity : AppCompatActivity() {
                     clearClickedOperator(btnList)
                     beforeNumber = getResult(operationType, beforeNumber, currentNumber)
                     currentNumber = 0.0
+                    operationType = 5
                     textView.text = beforeNumber.toString()
                 }
 
@@ -148,10 +149,12 @@ class MainActivity : AppCompatActivity() {
         return textView.text.toString().toDouble()
     }
 
-    private fun operate(beforeNum: Double, currentNum: Double, beforeOperation: Int): MutableMap<String, Double> {
+    private fun operate(beforeNum: Double, currentNum: Double, beforeOperation: Int, currentOperation: Int): MutableMap<String, Double> {
 
         if (beforeOperation == 0) {
             return mutableMapOf(Pair("beforeNum", currentNum), "currentNum" to 0.0)
+        } else if (beforeOperation == 5) { // = 을 클릭 후 이어서 연산하는 경우
+            return mutableMapOf(Pair("beforeNum", beforeNum), "currentNum" to 0.0)
         } else {
             when (beforeOperation) {
                 1 -> { // +
