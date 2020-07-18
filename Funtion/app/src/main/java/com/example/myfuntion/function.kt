@@ -98,9 +98,4 @@ fun main() {
         println(arr)
     }
 
-
-
-
-
-
 }

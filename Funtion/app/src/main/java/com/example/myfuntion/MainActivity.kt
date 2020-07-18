@@ -118,6 +118,28 @@ class MainActivity : AppCompatActivity() {
                     textView.text = "0"
                 }
 
+                btnPercent.id -> {
+                    clearClickedOperator(btnList)
+                    if (operationType == 5) {
+                        beforeNumber = setSpecialNumber(beforeNumber, "%")
+                    } else {
+                        currentNumber = setSpecialNumber(currentNumber, "%")
+                    }
+
+                }
+                btnInvert.id -> {
+                    clearClickedOperator(btnList)
+                    if (operationType == 5) {
+                        beforeNumber = setSpecialNumber(beforeNumber, "+/-")
+                    } else {
+                        currentNumber = setSpecialNumber(currentNumber, "+/-")
+                    }
+                }
+
+                btnDot.id -> {
+//                     개인의 역량을 위해 남겨둡니다.
+                }
+
             }
 
         }
@@ -138,6 +160,26 @@ class MainActivity : AppCompatActivity() {
         btnAdd.setOnClickListener(btnListener)
         btnAC.setOnClickListener(btnListener)
         btnResult.setOnClickListener(btnListener)
+        btnPercent.setOnClickListener(btnListener)
+        btnInvert.setOnClickListener(btnListener)
+        btnDot.setOnClickListener(btnListener)
+    }
+
+    private fun setSpecialNumber(currentNum: Double, input: String): Double {
+
+        if (currentNum == 0.0) {
+//            nothing
+        } else {
+            when (input) {
+                "%" -> {
+                    textView.text = (textView.text.toString().toDouble() / 100).toString()
+                } "+/-" -> {
+                    textView.text = (textView.text.toString().toDouble() * -1).toString()
+                }
+            }
+        }
+        return textView.text.toString().toDouble()
+
     }
 
     private fun setNumber(currentNum: Double, input: Int): Double {

@@ -40,13 +40,11 @@
                 android:id="@+id/btnInvert"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:enabled="false"
                 android:text="+/-"/>
             <Button
                 android:id="@+id/btnPercent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:enabled="false"
                 android:text="%"/>
             <Button
                 android:id="@+id/btnDivide"
@@ -188,7 +186,6 @@
                 android:text="."
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:enabled="false"
                 android:backgroundTint="@android:color/darker_gray"/>
             <Button
                 android:id="@+id/btnResult"
