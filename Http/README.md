@@ -2,7 +2,12 @@
 
 인터넷은 전송할 데이터를 HTTP라는 프로토콜로 만들어진 패킷에 담은 후에 전송프로토콜인 TCP/IP(Transmission Control Protocal/Internet Protocol)를 사용하여 전달하는 구조를 가진다.
 
-HTTP는 웹상의 서버와 웹브라우저의 통신이 가능하도록 설계된 표준규약이다.
+HTTP는 웹상의 서버와 웹브라우저의 통신이 가능하도록 설계된 표준규약
+TCP는 패킷의 순서를 보장해주기위한 전송 규약
+IP는 인터넷의 주소 규칙
+
+TCP를 기반으로 하는 많은 프로토콜(HTTP, FTP, SMTP등등)이 존재하며 TCP는 IP를 기반으로 동작하므로 편의상 묶어서 TCP/IP라고 칭한다.
+
 
 ![image](https://user-images.githubusercontent.com/36143374/88409109-76221d80-ce0f-11ea-8615-153697f59984.png)
 
@@ -57,9 +62,3 @@ https://developer.mozilla.org/ko/docs/Web/HTTP/Overview
 
 응답에 대한 상태를 정의한 코드번호
 https://developer.mozilla.org/ko/docs/Web/HTTP/Status
-
----
-
-패킷 - 데이터가 전송되는 단위
-TCP - 데이터 전달 규칙
-IP - 인터넷 주소 규칙
