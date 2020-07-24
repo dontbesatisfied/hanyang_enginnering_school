@@ -11,28 +11,28 @@ HTTP 구조
 
 1. Header
     1. General
-        1-1. Date - HTTP 메세지 생성시간
-        1-2. Connection - 클라이언트와 서버간의 연결 옵션
-        1-3. Cache-Control - 캐싱 정책
+        1. Date - HTTP 메세지 생성시간
+        2. Connection - 클라이언트와 서버간의 연결 옵션
+        3. Cache-Control - 캐싱 정책
         ...등등
 
     2. Request / Response
-        2-1-1. Host - 요청하는 호스트의 이름 및 포트번호
-        2-1-2. User-Agent - 요자의 정보(브라우저, OS등)
-        2-1-3. Origin - 요청이 발생한 주소. 보낸 주소와 받는 주소가 다르면 CORS 에러 발생
-        2-1-4. Cookie - 쿠키정보
-        2-1-5. Referer - 직전에 머물렀던 웹 주소
-        2-1-6. Authorization - 인증토큰을 전송
-        2-2-1. Server - 웹서버 정보
-        2-2-2. Set-Cookie - 서버에게 설정(전송)한 쿠키
-        2-2-3. Access-Control-Allow-Origin - 요청이 허용되는 주소
+        1. Host - 요청하는 호스트의 이름 및 포트번호
+        2. User-Agent - 요자의 정보(브라우저, OS등)
+        3. Origin - 요청이 발생한 주소. 보낸 주소와 받는 주소가 다르면 CORS 에러 발생
+        4. Cookie - 쿠키정보
+        5. Referer - 직전에 머물렀던 웹 주소
+        6. Authorization - 인증토큰을 전송
+        7. Server - 웹서버 정보
+        8. Set-Cookie - 서버에게 설정(전송)한 쿠키
+        9. Access-Control-Allow-Origin - 요청이 허용되는 주소
         ...등등
 
     3. Entity - 본문(Body)에 대한 정보
-        3-1. Content-Type - 본문에 포함되는 미디어 타입 정보
-        3-2. Content-Language
-        3-3. Content-Encoding - 본문에 데이터 압축 방식
-        3-4. Content-Length - 본문의 바이트 크기
+        1. Content-Type - 본문에 포함되는 미디어 타입 정보
+        2. Content-Language
+        3. Content-Encoding - 본문에 데이터 압축 방식
+        4. Content-Length - 본문의 바이트 크기
         ... 등등
 
 2. Body
