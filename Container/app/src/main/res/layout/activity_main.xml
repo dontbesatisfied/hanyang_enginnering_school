@@ -51,5 +51,19 @@
             android:layout_height="wrap_content"
             android:text="Spinner"
             android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/recyclerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/httpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Http"
+            android:textAllCaps="false" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

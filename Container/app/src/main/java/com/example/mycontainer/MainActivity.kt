@@ -15,5 +15,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        recyclerBtn.setOnClickListener {
+            val intent = Intent(this, RecyclerViewActivity::class.java)
+            startActivity(intent)
+        }
+
+        httpBtn.setOnClickListener {
+            val intent = Intent(this, HttpActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }

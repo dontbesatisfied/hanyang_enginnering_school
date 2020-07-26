@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         /**
          * 1. manifiests 파일에 권한 추가 (추가후에도 안된다면 에뮬레이터에서 앱을 삭제 후 다시 실행)
          * 2. 메인 스레드에서 통신 및 UI 작업을 하면 안되므로 새로운 스레드로 작업
-        * 3. retrofit을 사용하기 위해서 자바 버전 변석
+         * 3. retrofit을 사용하기 위해서 자바 버전 변경
          * 4. gradle에 retrofit, gson 추가
          */
 
